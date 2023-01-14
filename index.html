@@ -36,14 +36,21 @@
         <div class="sub_contenedor">
             <h2 class="titulo">Encriptador Alura</h2>
             <p class="indicacion"><strong>Nota:</strong>Solo usar letras minúsculas y sin acentos</p>
-            <form>
-                <textarea id="mensaje" cols="20" rows="10" class="input" placeholder="Ingrese el texto aqui" required></textarea>
+            <div class="forma">
+                <textarea id="mensaje" cols="20" rows="10" class="input" placeholder="Ingrese el texto aqui" ></textarea>
                 <br>
                 <div class="botones">
-                    <input type="submit" class="encriptar" value="Encriptar">
-                    <input type="submit" class="desencriptar" value="Desencriptar">
+                    <button class="encriptar"  onclick="desplegar_1()">Encriptar</button>
+                    <button type="submit" class="desencriptar" >Desencriptar</button>
                 </div>
-            </form>
+            </div>
+
+            <div id="encriptado" style="display: none;">
+                <h2>Texto encriptado</h2>
+                <p id="desplegar_texto_1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, voluptatibus. Nulla laborum veniam porro debitis voluptatem saepe tenetur nobis culpa nam! Dolore molestias alias ipsam quos. Exercitationem quos nostrum ipsum.
+                </p>
+            </div>
         </div>
     </div>
     
@@ -51,9 +58,19 @@
         <p>Aguayo Cardenas Johann © Derechos Reservados</p>
     </footer>
     
-
+    <script>
+        function desplegar_1(){
+            var x = document.getElementById("encriptado")
+            if (x.style.display === 'none') {
+                x.style.display = 'inline-block';
+            } else {
+                x.style.display = 'none';
+            }
+        }
+    </script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="particles.js"></script>
     <script src="particulas.js"></script>  
+    <script src="componente.js"></script>
 </body>
 </html>

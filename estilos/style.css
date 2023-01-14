@@ -131,7 +131,7 @@ header nav ul li a:hover{
     font-size: 34px;
 }
 
-form{
+.forma{
     width: 100%;
     margin: 0 auto;
 }
@@ -185,6 +185,11 @@ input:hover{
 .desencriptar:hover{
     background: rgb(88, 119, 246);
     color: white;
+}
+
+#encriptado{
+    width: 100%;
+    border: 1px solid red;
 }
 
 .pie_pagina{
