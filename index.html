@@ -36,17 +36,24 @@
         <div class="sub_contenedor">
             <h2 class="titulo">Encriptador Alura</h2>
             <p class="indicacion"><strong>Nota:</strong>Solo usar letras minúsculas y sin acentos</p>
-            <div class="forma">
-                <textarea id="mensaje" cols="20" rows="10" class="input" placeholder="Ingrese el texto aqui" ></textarea>
+            <form>
+                <textarea id="mensaje" cols="20" rows="10" class="input" placeholder="Ingrese el texto aqui"></textarea>
                 <br>
                 <div class="botones">
-                    <button class="encriptar"  onclick="desplegar_1()">Encriptar</button>
-                    <button type="submit" class="desencriptar" >Desencriptar</button>
+                    <input type="button" class="encriptar" value="Encriptar" onclick="deplegar_1()">
+                    <input type="button" class="desencriptar" value="Desencriptar" onclick="deplegar_2()">
                 </div>
-            </div>
+            </form>
 
             <div id="encriptado" style="display: none;">
-                <h2>Texto encriptado</h2>
+                <h2>Texto Encriptado</h2>
+                <p id="desplegar_texto_1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, voluptatibus. Nulla laborum veniam porro debitis voluptatem saepe tenetur nobis culpa nam! Dolore molestias alias ipsam quos. Exercitationem quos nostrum ipsum.
+                </p>
+            </div>
+
+            <div id="desencriptado" style="display: none;">
+                <h2>Texto Desencriptado</h2>
                 <p id="desplegar_texto_1">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, voluptatibus. Nulla laborum veniam porro debitis voluptatem saepe tenetur nobis culpa nam! Dolore molestias alias ipsam quos. Exercitationem quos nostrum ipsum.
                 </p>
@@ -59,15 +66,30 @@
     </footer>
     
     <script>
-        function desplegar_1(){
-            var x = document.getElementById("encriptado")
-            if (x.style.display === 'none') {
-                x.style.display = 'inline-block';
-            } else {
-                x.style.display = 'none';
-            }
+
+        function deplegar_1() {
+          var x = document.getElementById('encriptado');
+          var y = document.getElementById('desencriptado');
+          if (x.style.display === 'none') {
+            x.style.display = 'block';
+            y.style.display = 'none';
+          } else {
+            x.style.display = 'none';
+          }
+        }
+
+        function deplegar_2() {
+          var x = document.getElementById('desencriptado');
+          var y = document.getElementById('encriptado');
+          if (x.style.display === 'none') {
+            x.style.display = 'block';
+            y.style.display = 'none';
+          } else {
+            x.style.display = 'none';
+          }
         }
     </script>
+
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="particles.js"></script>
     <script src="particulas.js"></script>  
