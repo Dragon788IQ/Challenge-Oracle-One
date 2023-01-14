@@ -117,6 +117,7 @@ header nav ul li a:hover{
     padding: 20px;
     background: white;
     position: relative;
+    margin-bottom: 3em;
 }
 
 .sub_contenedor p{
@@ -125,20 +126,39 @@ header nav ul li a:hover{
     font-family: Helvetica, sans-serif;
     background: white;
 }
+
+.titulo{
+    font-size: 34px;
+}
+
 form{
-    background: white;
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
 }
-button{
-    display: inline-block;
-    width: 45%;
+
+textarea{
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    padding:  0 20px;
+    font-size: 26px;
+    border: none;
+}
+
+.botones{
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+input{
+    margin-bottom: 10px;
+    width: 40%;
     height: 40px;
-    margin: o auto;
     font-size: 20px;
 }
 
-button:hover{
+input:hover{
     cursor: pointer;
     transition: 0.3s all;
 }
@@ -146,7 +166,7 @@ button:hover{
     background-color: rgb(30, 68, 223);
     color: white;
     border: none;
-    border-radius: 30px;
+    border-radius: 20px;
 }
 
 .encriptar:hover{
@@ -163,11 +183,17 @@ button:hover{
 }
 
 .desencriptar:hover{
-    background: rgb(59, 93, 229);
+    background: rgb(88, 119, 246);
     color: white;
 }
 
 @media screen and (max-width:480px){
+
+    header nav ul li a{
+        font-size: 26px;
+        padding: 0px 10px;
+    }
+
     .texto h2{
         font-family: 18px;
         letter-spacing: normal;
@@ -177,7 +203,8 @@ button:hover{
         font-family: 15px;
         letter-spacing: normal;
     }
-    button{
+
+    input{
         width: 100%;
         display: block;
     }
