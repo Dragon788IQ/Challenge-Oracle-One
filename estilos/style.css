@@ -187,6 +187,21 @@ input:hover{
     color: white;
 }
 
+.pie_pagina{
+    margin-top: 80px;
+    position: relative;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.80);
+    text-align: center;
+}
+
+.pie_pagina p{
+    font-size: 18px;
+    line-height: 80px;
+    background: rgba(0, 0, 0, 0.01);
+    color: rgb(255, 255, 255);
+}
+
 @media screen and (max-width:480px){
 
     header nav ul li a{
