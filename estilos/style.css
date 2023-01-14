@@ -145,6 +145,10 @@ textarea{
     border: none;
 }
 
+textarea:focus{
+    outline-color:rgb(30, 68, 223);
+}
+
 .botones{
     text-align: center;
     width: 70%;
@@ -189,7 +193,6 @@ input:hover{
 
 #encriptado{
     width: 100%;
-    border: 1px solid red;
 }
 
 .pie_pagina{
