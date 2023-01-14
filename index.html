@@ -3,26 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reto Codificador</title>
-    <link rel="stylesheet" href="estilos/reset.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Encripatador</title>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="estilos/style.css">
 </head>
-<body>
+<body> 
+    <div id="particles-js"></div>
+
     <header>
-        <div class="caja">
-            <h1><img src="imagenes/hacker.png"></h1>
-            <h1 class="titulo_principal">Codificador Alura </h1>
+        <div class="menu">
+            <div class="contenedor">
+                <div class="logo">Encriptador Alura</div>
+                <nav>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/johann-aguayo-cardenas-55295018a/">Linkedln</a></li>
+                        <li><a href="https://github.com/Dragon788IQ">Github</a></li>
+                        <li><a href="https://www.aluracursos.com/">Cursos</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <div class="Contendor">
-
+    <div class="texto">
+        <h2>User: Johann Aguayo</h2>
+        <br>
+        <p><a href="https://github.com/Dragon788IQ">Pass: www.Github.com/Dragon788IQ</a></p>
     </div>
 
-    <footer>
-
+    <div class="principal_contendor">
+        <div class="sub_contenedor">
+            <h2 class="titulo">Encriptador Alura</h2>
+            <p class="indicacion"><strong>Nota:</strong>Solo usar letras minúsculas y sin acentos</p>
+            <form>
+                <textarea id="mensaje" cols="20" rows="10" class="input" placeholder="Ingrese el texto aqui" required></textarea>
+                <br>
+                <div class="botones">
+                    <input type="submit" class="encriptar" value="Encriptar">
+                    <input type="submit" class="desencriptar" value="Desencriptar">
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <footer class="pie_pagina">
+        <p>Aguayo Cardenas Johann © Derechos Reservados</p>
     </footer>
+    
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="particles.js"></script>
+    <script src="particulas.js"></script>  
 </body>
 </html>
