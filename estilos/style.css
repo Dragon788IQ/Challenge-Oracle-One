@@ -1,47 +1,162 @@
-body{
-    background: linear-gradient(to bottom, #052048, #1b3c6c, #2f5a93, #417abb, #539ce5);
-    color: white;
-    font-family:'Space Mono', monospace;
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-.caja{
-    background-color: black;
+body{
+    font-family: oswald, Arial, Helvetica, sans-serif;
+    background: url(/imagenes/bg.jpg), black;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+#particles-js{
     width: 100%;
-    height: 120px;
-    display: flex;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+header{
+    position: relative;
+    height: auto;
+}
+
+header .menu{
+    background-color: rgba(255, 255, 255, 0.85);
+    overflow: hidden;
+}
+
+header .logo{
+    color: rgba(0, 0, 0, 0.85);
+    float: left;
+    margin-left: 1em;
+    font-size: 40px;
+    line-height: 80px;
+}
+
+header nav{
+    float: right;
+    margin-right: 4em;
+}
+
+header nav ul{
+    list-style: none;
+}
+
+header nav ul li{
+    float: left;
+}
+
+header nav ul li a{
+    color: rgba(0, 0, 0, 0.85);
+    text-decoration: none;
+    display: block;
+    font-size: 25px;
+    padding: 0px 20px;
+    line-height: 80px;
+}
+
+header nav ul li a:hover{
+    color: white;
+    background: rgba(0, 0, 0, 0.70);
+}
+
+.texto{
+    position: relative;
+    color: white;
+    padding: 50px 0px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.texto h2, p{
+    background: rgba(0, 0, 0, 0.85);
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.texto h2{
+    font-size: 40px;
+    letter-spacing: 2.5px;
+    font-weight: normal;
+}
+
+.texto p{
+    font-size: 25px;
+    letter-spacing: 2.5px;
+}
+
+.texto p a{
+    text-decoration: none;
+    color: white;
+}
+
+.texto p a:hover{
+    color: black;
+    background: rgba(255, 255, 255, 0.80);
+}
+
+.principal_contenedor{
+    position: relative;
+    color: black;
+}
+
+.sub_contenedor{
+    width: 85%;
     margin: 0 auto;
     padding: 20px;
+    background: white;
+    position: relative;
 }
 
-.caja img{
-    max-width: 150px;
-    max-height: 220px;
+.sub_contenedor p{
+    margin-right: 20px;
+    line-height: 24px;
+    font-family: Helvetica, sans-serif;
+    background: white;
 }
 
-.titulo_principal{
-    padding: 40px;
-    font-size: 48px;
+button{
+    width: 30%;
+    height: 40px;
+    margin: o auto;
+    font-size: 20px;
 }
 
-@media screen and (max-width: 760px){
-    .caja{
-        width: 100%;
-        display: flex;
-        margin: 0 auto;
-        padding: 20px;
-    }
+button:hover{
+    cursor: pointer;
+}
+.encriptar{
+    background-color: rgb(30, 68, 223);
+    color: white;
+    border: none;
+    border-radius: 30px;
+}
 
-    .caja img{
-        max-width: 100px;
-        max-height: 150px;
-        border: 1px solid white;
-    }
+.encriptar:hover{
+    background: rgb(65, 98, 232);
+    color:white;
+    border: 2px solid rgb(30, 68, 223);
+}
 
-    .titulo_principal{
-        width: 180px;
-        height: 70px;
-        padding: 10px;
-        font-size: 22px;
-        border: 1px solid white;
-    }
+.desencriptar{
+    background-color:white;
+    color:  rgb(30, 68, 223);
+    border: 2px solid  rgb(30, 68, 223);
+    border-radius: 30px;
+}
+
+.desencriptar:hover{
+    background: rgb(59, 93, 229);
+    color: white;
 }
