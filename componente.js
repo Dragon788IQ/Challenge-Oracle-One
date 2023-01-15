@@ -27,13 +27,58 @@ function deplegar_2() {
   } else {
     contenedor_2.style.display = 'none';
   }
+  decodificar()
 }
 
 function codificador(texto){
   let mensaje_raw = document.getElementById('mensaje').value.toString();
   let mensaje_process = [];
-  var contador =0;
-  console.log(typeof mensaje_raw);
-  mensaje_raw=mensaje_raw.replace("o", "ine")
-  texto_1.textContent = mensaje_raw;
+  let contador =0;
+
+  mensaje_process = mensaje_raw.split("")
+
+  while(contador < mensaje_process.length){
+    if(mensaje_process[contador] == 'a'){
+      mensaje_process[contador] = 'ai';
+    }
+    if(mensaje_process[contador] == 'e'){
+      mensaje_process[contador] = 'enter';
+    }
+    if(mensaje_process[contador] == 'i'){
+      mensaje_process[contador] = 'imes';
+    }
+    if(mensaje_process[contador] == 'o'){
+      mensaje_process[contador] = 'ober';
+    }
+    if(mensaje_process[contador] == 'u'){
+      mensaje_process[contador] = 'ufat';
+    }
+    contador += 1;
+  }
+  texto_1.textContent = mensaje_process.join("");
+}
+
+function decodificar(){
+  let mensaje_raw = document.getElementById('mensaje').value.toString();
+  let mensaje_process = mensaje_raw.split(" ");
+  let contador = 0;
+
+  console.log(mensaje_process)
+
+  while(contador < mensaje_process.length){
+    mensaje_process[contador] = remplazador(mensaje_process[contador])
+    contador += 1;
+  }
+  texto_2.textContent = mensaje_process.join(" ");
+}
+
+function remplazador(palabra){
+
+  palabra = palabra.replace(/ai/gi, 'a')
+  palabra = palabra.replace(/enter/gi, 'e')
+  palabra = palabra.replace(/imes/gi, 'i')
+  palabra = palabra.replace(/ober/gi, 'o')
+  palabra = palabra.replace(/ufat/gi, 'u') 
+
+  return palabra
 }
