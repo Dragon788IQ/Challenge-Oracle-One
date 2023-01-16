@@ -2,8 +2,8 @@
 function deplegar_1() {
   let contenedor_1 = document.getElementById('encriptado');
   let contenedor_2 = document.getElementById('desencriptado');
-  let texto_1 = document.getElementById("texto_1")
-  let texto_2 = document.getElementById("texto_2")
+  var texto_1 = document.getElementById("texto_1")
+  var texto_2 = document.getElementById("texto_2")
 
   if (contenedor_1.style.display === 'none') {
     contenedor_1.style.display = 'block';
@@ -17,8 +17,8 @@ function deplegar_1() {
 function deplegar_2() {
   let contenedor_2 = document.getElementById('desencriptado');
   let contenedor_1 = document.getElementById('encriptado');
-  let texto_1 = document.getElementById("texto_1")
-  let texto_2 = document.getElementById("texto_2")
+  var texto_1 = document.getElementById("texto_1")
+  var texto_2 = document.getElementById("texto_2")
 
   if (contenedor_2.style.display === 'none') {
     contenedor_2.style.display = 'block';
@@ -63,8 +63,6 @@ function decodificar(){
   let mensaje_process = mensaje_raw.split(" ");
   let contador = 0;
 
-  console.log(mensaje_process)
-
   while(contador < mensaje_process.length){
     mensaje_process[contador] = remplazador(mensaje_process[contador])
     contador += 1;
@@ -81,4 +79,16 @@ function remplazador(palabra){
   palabra = palabra.replace(/ufat/gi, 'u') 
 
   return palabra
+}
+
+function copiar_1(){
+  let copyText = document.getElementById('texto_1').textContent;
+  navigator.clipboard.writeText(copyText);
+  alert("Se ha copiado el texto: " + copyText)
+}
+
+function copiar_2(){
+  let copyText = document.getElementById('texto_2').textContent;
+  navigator.clipboard.writeText(copyText);
+  alert("Se ha copiado el texto: " + copyText)
 }
