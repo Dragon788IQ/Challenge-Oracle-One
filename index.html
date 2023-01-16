@@ -37,13 +37,35 @@
             <h2 class="titulo">Encriptador Alura</h2>
             <p class="indicacion"><strong>Nota:</strong>Solo usar letras minúsculas y sin acentos</p>
             <form>
-                <textarea id="mensaje" cols="20" rows="10" class="input" placeholder="Ingrese el texto aqui" required></textarea>
+                <textarea id="mensaje" cols="20" rows="10" class="input" placeholder="Ingrese el texto aqui"></textarea>
                 <br>
                 <div class="botones">
-                    <input type="submit" class="encriptar" value="Encriptar">
-                    <input type="submit" class="desencriptar" value="Desencriptar">
+                    <input type="button" class="encriptar" value="Encriptar" onclick="deplegar_1()">
+                    <input type="button" class="desencriptar" value="Desencriptar" onclick="deplegar_2()">
                 </div>
             </form>
+
+            <div id="encriptado" style="display: none;">
+                <h2>Texto Encriptado</h2>
+                <p id="texto_1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, voluptatibus. Nulla laborum veniam porro debitis voluptatem saepe tenetur nobis culpa nam! Dolore molestias alias ipsam quos. Exercitationem quos nostrum ipsum.
+                </p>
+                <br>
+                <div class="botones">
+                    <input type="button" class="copeador" value="Copiar texto" onclick="copiar_1()">
+                </div>
+            </div>
+
+            <div id="desencriptado" style="display: none;">
+                <h2>Texto Desencriptado</h2>
+                <p id="texto_2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, voluptatibus. Nulla laborum veniam porro debitis voluptatem saepe tenetur nobis culpa nam! Dolore molestias alias ipsam quos. Exercitationem quos nostrum ipsum.
+                </p>
+                <br>
+                <div class="botones">
+                    <input type="button" class="copeador" value="Copiar texto" onclick="copiar_2()">
+                </div>
+            </div>
         </div>
     </div>
     
@@ -51,9 +73,9 @@
         <p>Aguayo Cardenas Johann © Derechos Reservados</p>
     </footer>
     
-
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="particles.js"></script>
     <script src="particulas.js"></script>  
+    <script src="componente.js"></script>
 </body>
 </html>
