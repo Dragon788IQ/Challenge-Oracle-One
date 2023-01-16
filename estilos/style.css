@@ -8,7 +8,7 @@
 
 body{
     font-family: oswald, Arial, Helvetica, sans-serif;
-    background: url(imagenes/bg.jpg), black;
+    background: url("../imagenes/bg.jpg"), black;
     background-size: cover;
     background-attachment: fixed;
 }
